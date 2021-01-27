@@ -17,6 +17,14 @@
   },
   "projects": {
     "learn-nx": { "tags": [] },
-    "learn-nx-e2e": { "tags": [], "implicitDependencies": ["learn-nx"] }
+    "learn-nx-e2e": { "tags": [], "implicitDependencies": ["learn-nx"] },
+    "spa": { "tags": [] },
+    "spa-e2e": { "tags": [], "implicitDependencies": ["spa"] },
+    "static-app": { "tags": [] },
+    "static-app-e2e": { "tags": [], "implicitDependencies": ["static-app"] },
+    "shared": { "tags": [] },
+    "shared2": { "tags": [] },
+    "shared3": { "tags": [] },
+    "redux1": { "tags": [] }
   }
 }

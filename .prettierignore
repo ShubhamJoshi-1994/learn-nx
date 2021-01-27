@@ -2,3 +2,11 @@
 
 /dist
 /coverage
+
+/apps/static-app/node_modules
+/apps/static-app/public
+/apps/static-app/.cache
+
+/apps/static-app/node_modules
+/apps/static-app/public
+/apps/static-app/.cache
