@@ -1,0 +1,135 @@
+{
+  "version": 2,
+  "projects": {
+    "learn-nx": {
+      "root": "apps/learn-nx",
+      "sourceRoot": "apps/learn-nx/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/learn-nx",
+            "index": "apps/learn-nx/src/index.html",
+            "main": "apps/learn-nx/src/main.tsx",
+            "polyfills": "apps/learn-nx/src/polyfills.ts",
+            "tsConfig": "apps/learn-nx/tsconfig.app.json",
+            "assets": [
+              "apps/learn-nx/src/favicon.ico",
+              "apps/learn-nx/src/assets"
+            ],
+            "styles": [
+              "apps/learn-nx/src/styles.css"
+            ],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/learn-nx/src/environments/environment.ts",
+                  "with": "apps/learn-nx/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "learn-nx:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "learn-nx:build:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/learn-nx/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/learn-nx"
+          ],
+          "options": {
+            "jestConfig": "apps/learn-nx/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "learn-nx-e2e": {
+      "root": "apps/learn-nx-e2e",
+      "sourceRoot": "apps/learn-nx-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/learn-nx-e2e/cypress.json",
+            "tsConfig": "apps/learn-nx-e2e/tsconfig.e2e.json",
+            "devServerTarget": "learn-nx:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "learn-nx:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/learn-nx-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "learn-nx"
+}
