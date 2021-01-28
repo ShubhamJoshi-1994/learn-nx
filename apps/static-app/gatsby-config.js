@@ -1,3 +1,4 @@
+console.log('__dirname',__dirname)
 module.exports = {
   siteMetadata: {
     title: `static-app`,
@@ -37,6 +38,15 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/logo.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: [`en`, `hi`],
+        defaultLanguage: `en`,
+        redirect: true,
       },
     },
   ],

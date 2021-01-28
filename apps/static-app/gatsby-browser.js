@@ -7,7 +7,6 @@ import { store } from "@learn-nx/redux2";
 import { Provider } from "react-redux";
 
 export const wrapRootElement = ({ element, data }) => {
-  console.log('strore', store);
   return (
     <Provider store={store} loading={<h1>Loading</h1>}>
         {element}

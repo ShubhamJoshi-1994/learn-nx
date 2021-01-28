@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import {UiHeader} from '@learn-nx/shared3';
 import {Counter} from '@learn-nx/shared3';
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 export const Index = () => {
   /*
@@ -18,6 +19,9 @@ export const Index = () => {
       </header>
       <main>
         <Counter />
+
+        <h3>This is a page element: <FormattedMessage id={'text-a'} /> </h3>
+        {/* <h4>This is a page element: <FormattedMessage id='text-a' /> </h4> */}
       </main>
     </div>
   );

@@ -3,6 +3,7 @@ import './counter.module.css';
 import { useSelector, useDispatch } from "react-redux";
 import {increaseCount, decreaseCount} from '@learn-nx/redux1'
 import {increment, decrement} from '@learn-nx/redux2'
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 
 export function Counter(props) {
@@ -42,6 +43,8 @@ export function Counter(props) {
         <button onClick={() => increase()}>Increase</button>
         <button onClick={() => decrease()}>Decrease</button>
       </div>
+
+      <h4>Counter component from lib: <FormattedMessage id={'text-a'} /> </h4>
     </div>
   );
 }

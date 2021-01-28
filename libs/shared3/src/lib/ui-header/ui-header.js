@@ -1,6 +1,7 @@
 import React from 'react';
 import './ui-header.module.css';
 import { useSelector } from "react-redux";
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 export function UiHeader(props) {
   // redux1
@@ -18,6 +19,7 @@ export function UiHeader(props) {
     <div>
       <h1>Welcome to ui-header! in shared3 lib</h1>
       <h4>Counter in UI Header component: {count}</h4>
+      <h4>Header component from lib: <FormattedMessage id={'text-a'} /> </h4>
     </div>
   );
 }

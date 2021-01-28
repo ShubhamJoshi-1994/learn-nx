@@ -8,7 +8,6 @@ let reducers = combineReducers({
 });
 
 // const store = createStore(reducers);
-console.log('reducers-123',reducers);
 const store = configureStore({
   reducer: reducers
 });
