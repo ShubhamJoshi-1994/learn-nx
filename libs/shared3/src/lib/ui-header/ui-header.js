@@ -3,9 +3,16 @@ import './ui-header.module.css';
 import { useSelector } from "react-redux";
 
 export function UiHeader(props) {
+  // redux1
+  // const count = useSelector(
+  //   (state) => state.countReducer.count.count
+  // );
+
+  // redux2
   const count = useSelector(
-    (state) => state.countReducer.count.count
+    (state) => state.counter
   );
+
 
   return (
     <div>

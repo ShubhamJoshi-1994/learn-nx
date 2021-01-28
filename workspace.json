@@ -394,6 +394,31 @@
           }
         }
       }
+    },
+    "redux2": {
+      "root": "libs/redux2",
+      "sourceRoot": "libs/redux2/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/redux2/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/redux2"
+          ],
+          "options": {
+            "jestConfig": "libs/redux2/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

@@ -2,27 +2,36 @@ import React from 'react';
 import './counter.module.css';
 import { useSelector, useDispatch } from "react-redux";
 import {increaseCount, decreaseCount} from '@learn-nx/redux1'
+import {increment, decrement} from '@learn-nx/redux2'
 
 
 export function Counter(props) {
   const dispatch = useDispatch();
+  console.log('increment', increment());
 
+  // redux1
+  // const count = useSelector(
+  //   (state) => state.countReducer.count.count
+  // );
+
+  // redux2
   const count = useSelector(
-    (state) => state.countReducer.count.count
+    (state) => state.counter
   );
 
 
 
   const increase = () => {
     // increase count
-    dispatch(increaseCount(count+1))
-    // dispatch({type: 'INC_COUNT', count: count+1})
+    // dispatch(increaseCount(count+1))
+    dispatch(increment())
+    
   };
 
   const decrease = () => {
     // decrease count
-    dispatch(decreaseCount(count-1))
-    // dispatch({type: 'DEC_COUNT', count: count-1})
+    // dispatch(decreaseCount(count-1))
+    dispatch(decrement())
   };
 
   return (

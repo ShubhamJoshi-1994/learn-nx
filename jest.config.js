@@ -7,5 +7,6 @@ module.exports = {
     '<rootDir>/libs/shared2',
     '<rootDir>/libs/shared3',
     '<rootDir>/libs/redux1',
+    '<rootDir>/libs/redux2',
   ],
 };

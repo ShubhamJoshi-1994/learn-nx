@@ -25,6 +25,7 @@
     "shared": { "tags": [] },
     "shared2": { "tags": [] },
     "shared3": { "tags": [] },
-    "redux1": { "tags": [] }
+    "redux1": { "tags": [] },
+    "redux2": { "tags": [] }
   }
 }

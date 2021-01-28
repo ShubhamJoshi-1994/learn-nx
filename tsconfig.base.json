@@ -18,7 +18,8 @@
       "@learn-nx/shared": ["libs/shared/src/index.ts"],
       "@learn-nx/shared2": ["libs/shared2/src/index.ts"],
       "@learn-nx/shared3": ["libs/shared3/src/index.js"],
-      "@learn-nx/redux1": ["libs/redux1/src/index.js"]
+      "@learn-nx/redux1": ["libs/redux1/src/index.js"],
+      "@learn-nx/redux2": ["libs/redux2/src/index.js"]
     }
   },
   "exclude": ["node_modules", "tmp"]
