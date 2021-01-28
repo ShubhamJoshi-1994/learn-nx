@@ -6,7 +6,7 @@ import {increment, decrement} from '@learn-nx/redux2'
 import { FormattedMessage } from "gatsby-plugin-intl";
 
 
-export function Counter(props) {
+export function Counter({navigationCallback}) {
   const dispatch = useDispatch();
   console.log('increment', increment());
 
@@ -45,6 +45,8 @@ export function Counter(props) {
       </div>
 
       <h4>Counter component from lib: <FormattedMessage id={'text-a'} /> </h4>
+
+      <button onClick={() => navigationCallback('/home')}>trigger Navigate from Counter component in index page to home page</button>
     </div>
   );
 }
